@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    
+    list-style: none;
+    text-decoration: none;
+}
+
+a, a:visited{
+    color: inherit;
+}
+th{
+    font-weight: normal;
+}
+
+/* -- Header -- */
+#login-header{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-list{
+    width: fit-content;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    color: white;
+}
+.header-list li{
+    margin-left: 30px;
+}
+.header-list li img{
+    width: 40px;
+}
+.header-list li h1{
+    font-size: 20px;
+}
+
+.top-left-head{
+    text-align: left;
+    margin-left: 50px;
+}
+.top-right-head{
+    text-align: right;
+    margin-right: 100px;
+
+}
+
+#mobile-header{
+    text-align: center;
+}
+
+/* -- BG -- */
+#main-bg{
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+#main-bg img{
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* -- login Form -- */
+.login-form-mobile-p{
+    display: none;
+}
+#login-form img{
+    display: none;
+}
+
+#login-form{
+    position: absolute;
+
+    top: calc(50% - 210px); 
+    left: calc(50% - 175px);
+    width: 350px;
+    height: 420px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background-image: url('images/Login Form Background.png');
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+
+    /*transition: all 0.25s;*/
+}
+#login-form p{
+    font-size: 18px;
+}
+
+#login-form-userinputs{
+    width: 80%;
+}
+
+#login-form-usertype input[type="radio"]{
+    display: none;
+}
+#login-form-usertype{
+    display: flex;
+}
+
+.login-form-input{
+    width: calc(100% - 15px);
+    height: 35px;
+    border: none;
+    border-left: 5px solid rgba(86, 235, 83, 0.8);
+    border-radius: 2px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+.login-form-input:focus{
+    outline-color: rgba(86, 235, 83, 0.8);
+    outline-style: solid;
+}
+
+.login-form-radio{
+    width: 100%;
+    color: black;
+    background-color: white;
+    border: none;
+    height: 35px;
+    font-size: 12px;
+    align-content: center;
+}
+
+.user-highlight{
+    background-color: rgba(86, 235, 83, 0.8);
+}
+
+.userR{
+    border: none;
+    border-right: 1px solid lightgray;
+    border-top-left-radius: 2px ;
+    border-bottom-left-radius: 2px ;
+}
+.empR{
+    border: none;
+    border-right: 1px solid lightgray;
+}
+.admR{
+    border: none;
+    border-top-right-radius: 2px ;
+    border-bottom-right-radius: 2px ;
+}
+
+.login-form-submit{
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-left: 5px solid rgba(86, 235, 83, 0.8);
+    border-right: 5px solid rgba(86, 235, 83, 0.8);
+    border-radius: 2px;
+    background-color: white;
+}
+
+@media screen and (max-width: 750px){
+    #login-form img{
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+    }
+    .login-form-mobile-p{
+        display: block;
+    }
+    #login-header{
+        display: none;
+    }
+    #login-form{
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+/* -- Stock -- */
+.home-bg{
+    background-color: #F1F3F9;
+}
+
+#main-section{
+    position: relative;
+    top:60px;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "aboveTable aboveTable aboveTable"
+                          "stock      stock      filter1"
+                          "stock      stock      filter1"
+                          "stock      stock      filter2"
+                          "stock      stock      filter2";
+    gap: 20px                      
+    
+}
+
+#above-table{
+    width: 100%;
+    margin-top: 40px;
+    grid-area: aboveTable;
+}
+
+.table-search-btn{
+    width: 200px;
+    height: 35px;
+    border: 2px solid #BBBBBB;
+    border-radius: 5px;
+}
+.table-add-btn{
+    width: 35px;
+    height: 35px;
+    color: white;
+    background-color: #56EB53;
+    border: none;
+    border-radius: 5px;
+}
+
+/* -- Table -- */
+#stock{
+    grid-area: stock;
+    width: 100%;
+    height: 550px;
+    border: 2px solid #BBBBBB;
+    border-radius: 5px;
+    text-align: center;
+}
+.table-header-header{
+    width: 100%;
+    background-color: #CCCCCC;
+    color: #555555;
+    border: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#stock-table{
+    width: 100%;
+}
+#stock-table tr{
+    height: 35px;
+}
+
+.stock-table-header{
+    background-color: #DDDDDD;
+    color: #888888;
+    font-size: 12px;
+    height: 25px !important;
+}
+
+.stock-table-name{
+    padding-left: 20px;
+    text-align: left;
+}
+.even{
+    background-color: #DDDDDD;
+}
+
+.stock-filter1{
+    grid-area: filter1;
+    width: 100%;
+    border: 2px solid #BBBBBB;
+    border-radius: 5px;
+}
+
+.stock-filter2{
+    grid-area: filter2;
+    width: 100%;
+    border: 2px solid #BBBBBB;
+    border-radius: 5px;
+}
